@@ -86,11 +86,20 @@
       float: left;
       width: 700px;
       padding-top: 20px;
+      
     }
 
     .info-box{
       padding-left:20px;
     }
+
+    .btn-box, .mov-title>b{
+     float: left;
+    }
+    .btn-box{
+      margin-left: 300px;
+    }
+
     .content-box {
       width: 90%;
       height: auto;
@@ -201,6 +210,12 @@
     .mov-grade{
       padding-left: 10px;
     }
+
+    .mov-title{
+      display: inline-block;
+      overflow: hidden;
+      width: 100%;
+    }
     
     .mov-dit{
       padding-right: 10px;
@@ -234,12 +249,25 @@
       .serach-writer{
         margin-left: 10px;
       }
-      /* 별점 */
-      .starbox{width:100px;}
-      .star-rating {width:320px; }
-      .star-rating,.star-rating span {display:inline-block; height:55px; overflow:hidden; background:url(/img/star.png)no-repeat; }
-      .star-rating span{background-position:left bottom; line-height:0; vertical-align:top; }
+     
+      .glyphicon-star{
+        padding-left: 3px;
+      }
+      .mov-sec{
+        overflow: hidden;
+      }
+     .mov-score{
+        color: rgb(233, 49, 49);
+        font-size: 15.5px;
+       font-weight: bolder;
+     }
+     
+     .rev-star{
+       padding-left: 4px;
+       border-left: 1px solid rgba(145, 142, 142, 0.431);
+     }
     
+
     
   </style>
 
@@ -346,16 +374,24 @@
 
         <div class="mid2">
           <div class="info-box">
-            <span class="mov-title"><b>원더우먼</b></span>
-            <span class="mov-ftitle"><h4>Wonder Woman</h4></span>
-            <!-- 별점 -->
-            <div class="starbox">
-             <div class="wrap-star">
-             <div class='star-rating'>
-                  <span style ="width:30%"></span>
+            <span class="mov-title">
+              <b>원더우먼</b>
+            
+              <!-- 관리자 아이디로 로그인시에만 보이게 하기 -->
+              <div class="btn-box">
+                <input type="button" value="수정">
+                <input type="button" value="삭제">
               </div>
-            </div>  
-          </div>
+            </span>
+            <div class="mov-sec">
+              <span class="mov-ftitle"><h4>Wonder Woman</h4></span>
+              <div class="star-box">
+                <span class="star-icon">평점
+                  <span class="glyphicon glyphicon glyphicon-star" aria-hidden="true" style="color: rgb(233, 49, 49);"></span>
+                  <span class="mov-score">5</span>
+                </span>
+              </div>
+            </div>
             <span class="mov-genre">액션/어드벤처</span>
             <div class="date-grade">
               <span class="mov-date">2021.01.03</span>
@@ -456,7 +492,14 @@
               <tr style="border-bottom: 0.1px solid rgba(145, 142, 142, 0.431);">
                 <td class="b1">#</td>
                 <td class="b2">
-                  <b style="font-weight: bold;">영화제목</b><br>
+                  <div class="rev-head">
+                    <b style="font-weight: bold;">영화제목</b>
+                    <span class="rev-star">별점
+                      <span class="glyphicon glyphicon glyphicon-star" aria-hidden="true" style="color: rgb(233, 49, 49);"></span>
+                      <span class="rev-score">5</span>
+                    </span>
+                  </div>
+                  <br>
                   <span class="text1">주저리주저리주저리주저리주저리주저리주저리주주저리주저리주저리주저리주저리주저리주저리주저리주저리주주저리주저리</span>
                   <br>
                   <span class="writer">작성자</span> 
@@ -488,12 +531,7 @@
     </div>
     
     
-    <!-- 관리자 아이디로 로그인시에만 보이게 하기 -->
-    <div class="btn-box" style="float: right;">
-      <input type="button" value="등록">
-      <input type="button" value="수정">
-      <input type="button" value="삭제">
-    </div>
+    
   </section>
 
 </body>

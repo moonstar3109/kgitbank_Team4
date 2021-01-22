@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+
+    * {margin: 0; padding: 0;}
+    ul,li{list-style: none;}
+    header{position: fixed; left: 0; top: 0; width: 100%; z-index: 10;} /* z-index : y축의 포지션 좌표 */
+    header .logo{text-align: center; background-color: white;}
+    .menu {text-align: center; background-color:black;}
+    .menu li{display: inline-block; padding: 30px;} 
+    .menu li a{font-size: large; color: white; text-decoration: none;}
+    .menu li:hover{background-color: #777;} /* hover시 배경색 */
+
+    section{height: 1000px;margin-top: 184px; background-color: turquoise; } /* header의 높이만큼 margin */
+
+        /* 사이드바 */
+    .side{position: fixed; right:0;top:270px; z-index: 1;}
+    .side li {
+        padding: 5px 20px;
+        background-color: #282828;
+        text-align: center;
+        border-bottom:1px solid #777 ;
+        display: block;
+    }
+    .side li a{
+        display: block;
+        font-size: small;
+        text-decoration: none;
+        color: blanchedalmond;
+    }
+    .side li :hover{
+        background-color: yellow;
+    }
+    </style>
+</head>
+<body>
+    <div class="text" style="position: fixed; z-index:20; right: 10px; top: 0;">로그인</div>
+    <header>
+        <div class="logo">
+            <img src="img/bgimg.png" alt="비릿내">
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+                <li><a href="#">메뉴</a></li>
+            </ul>
+        </nav>    
+    </header>
+
+    <section>
+        가나다라마바사
+        
+    </section>
+
+    <aside class="side">
+        <ul class="side-list">
+            <li>
+                <a href="#">
+                    <p>카카오톡</p>
+                    <p>dkkdkkdnfknsk123</p>
+                </a>
+            </li>
+            <li><a href="#">전화번호</a></li>
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴2</a></li>
+        </ul>
+    </aside>
+
+
+</body>
+</html>
